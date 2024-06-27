@@ -56,6 +56,4 @@ public class UserController {
         return "Error el eliminar el User ID: " + id;
     }
 
-
-
 }
