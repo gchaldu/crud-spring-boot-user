@@ -31,6 +31,11 @@ public class UserController {
         return this.userService.findByIdUser(id);
     }
 
+    @GetMapping(path = "")
+    public Optional<UserModel> findByIdParam(@RequestParam("userId") Long id) {
+        return this.userService.findByIdUser(id);
+    }
+
     @PutMapping(path = "/{id}")
     public UserModel updateUser(@PathVariable("id") Long id, @RequestBody UserModel userModel){
         return this.userService.updateUser(id, userModel);
